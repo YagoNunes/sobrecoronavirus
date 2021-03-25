@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="estilo.css">
     
     <style>
-        html,body,figure,img,div,input,textarea,p,h1,h2,h3,h4,h5,h6,ul,li,a,main{
+
+:root {
+    --cor-de-fundo-destaque:rgb(119, 151, 180);
+}
+
+
+html,body,figure,img,div,input,textarea,p,h1,h2,h3,h4,h5,h6,ul,li,a,main{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,26 +45,24 @@
 .coluna{
 
 }
+
 /*BODY*/
 body{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 /*HEADER*/
 header{
-    background-color: rgb(37, 34, 34);
-    padding-top: 30px;
-    
-    
+    background-color: var(--cor-de-fundo-destaque);
+    padding-top: 30px;   
 }
 header .container-cima{
     background-color: white;
     width: 100%;
     max-width: 950px;
     margin: 0 auto;
-    padding: 30px;
-    
-    
+    padding: 30px;    
 }
 header .linha-cima{
     
@@ -66,12 +70,8 @@ header .linha-cima{
 header .coluna{
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    
+    align-items: flex-start;   
 }
-header .coluna-img{}
-header .coluna-tiutlo{}
-header .coluna figure{}
 header .coluna img{
     max-width: 100px;
 }
@@ -81,18 +81,37 @@ header h1.titulo{
 }
 
 /*FOOTER*/
-footer{}
+footer{
+    background-color:var(--cor-de-fundo-destaque);
+    
+}
 footer .container{
     width: 100%;
     max-width: 950px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px 0 0 40px;
 }
-footer .nav{}
-footer ul{}
-footer ul li{}
+footer .linha-footer{
+    border-bottom: 1px solid rgb(49, 49, 49, 0.274);
+    margin: 0 0 30px;   
+}
+footer .redes-sociais{
+    width: 100%;
+    max-width: 897px;
+    margin: 0 auto;
+    padding: 0 0 50px;
+    margin-top: 0;
+    text-align: center;
+}
+footer ul li{
+    color: black;
+}
+footer .insta{
+    width: 40px;   
+}
+
+
 /*PAGINA INICIAL*/
-main{}
 main .container-meio{
     width: 100%;
     max-width: 650px;
@@ -100,31 +119,73 @@ main .container-meio{
     padding: 30px;
     
 }
-main .linha-meio{}
 main .titulosintomas{
     margin-left: 100px;   
 }
-main h1{}
-main  p{}
-main .ui-ae{}
+h2{
+    font-size: 1.3em;
+}
 main .container{
     padding: 30px;
 }
-main .linha{}
-main .coluna-meio{}
-main .coluna-esquerda{}
-main .coluna-direita{}
 main .coluna section.borda{
     border: #dfdfdf solid 1px;
     margin: 0 0 20px;
     padding: 10px;
 }
-main .coluna section h2{}
-main .coluna section ul{}
-main .coluna section ul li{}
-/*EXTRAS*/
+
+
+
+
+
+
 
 /*@MEDIA*/
+@media only screen and (max-width: 768px){
+
+    header .coluna img{
+        max-width: 50px;
+        
+    }
+
+    header h1.titulo{
+        margin-top: 8px;
+        margin-left: 10px;
+        font-size: 1.5em;
+        color: rgba(60, 60, 65, 0.726);
+        
+    }
+
+    header{
+        background-color: var(--cor-de-fundo-destaque);
+        padding-top: 0px;   
+    }
+
+    header .container-cima{
+        width:100%;
+        max-width: 450px;
+        margin: 0 ;
+        padding: 10px 0px 0px 15px;
+        border-bottom: 1px solid rgba(39, 37, 37, 0.144);
+        margin: 0px 0 50px;
+        }
+
+        main .titulosintomas{
+            margin-left: 0px;
+            font-size: 0.88em;   
+            margin: 0 0 10px;
+        }
+       .linha{
+           display: inline-block;
+       }
+
+       footer .container{
+        width: 80vw;
+        max-width: 100vw;
+        padding: 30px 0 0 0;
+
+    }
+}
     </style>
     
 </head>
@@ -138,7 +199,7 @@ main .coluna section ul li{}
                     <!-- Caixa imagem covid-->
                     <div class="coluna couluna-img">
                         <figure>
-                        <img src="https://lh3.googleusercontent.com/proxy/4TOiqtUiz-Z3nC45_49fKD-olgXheCquktrmCen797D2oWH4MxVEssEn8zvP8PaZP46tvmtfyN1nyI-0b24xv_Cc9XzCAsxn9HWQ5UwgnJRUVt-0BMpjGrE" alt="ImagemCovid">
+                        <img src="unnamed.png" alt="ImagemCovid">
                         <figcaption class="hidden">ImagemCovid</figcaption>
                         </figure>
 
@@ -165,7 +226,7 @@ main .coluna section ul li{}
                                 </h1>
                             </div>
                                 <p>
-                                    <dt class="ui ae">
+                                    <dt>
                                         A COVID-19 afeta diferentes pessoas de diferentes maneiras. A maioria das pessoas infectadas apresentará
                                         sintomas leves a moderados da doença e não precisarão ser hospitalizadas.<br>
                                     </dt>
@@ -257,13 +318,24 @@ main .coluna section ul li{}
             <!--Informaçoes Sobre Mim-->
         <footer>
             <div class="container">
-                <nav>
-                    <ul>
-                        <li>Email: yagonunesoliveirajn@gmail.com</li>
-                        <li>Telefone:(85)98627-7787</li>
-                    </ul>
-                </nav>
+                <div class="linha-footer">
+                        <ul>
+                            <strong>
+                                <li>Email: yagonunesoliveirajn@gmail.com</li>
+                                <li>Telefone:(85)98627-7787</li> 
+                            </strong>
+                        </ul>                  
+                </div>
             </div>
+
+            <nav  class="redes-sociais">
+                <ul>                      
+                    <a href=" https://www.instagram.com/soueu_oyago/">
+                    <img class="insta" src="./logo-instagram-png-sem-fundo16.png" alt="Imagemlogoinsta">                       
+                    </a>
+                    <li>@soueu_oyago</li>
+                </ul>
+            </nav>
         </footer>
 
     </body>
