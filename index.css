@@ -108,7 +108,7 @@ dt{
 
 .sub-navbar-one{
 
-    width: 1200px;
+    width: 90%;
 
     margin: 0 auto;
     display: flex;
@@ -225,6 +225,9 @@ li{
     .img-dor-peito{
         padding-left: 70px;
     }
+    .eu-instruçoes{
+        margin-left: -10%;
+    }
 
     
 }
@@ -243,14 +246,20 @@ li{
        
         display: inline-block;
     }
+    .sobre-febre{
+        padding-left: 20px;
+    }
+    .dor-garganta{
+        padding-left: 20px;
+    }
 
     .img-dor-peito{
-        padding-left: 30px;
+        padding-left: 50px;
+    }
+    .eu-informacao{
+        margin-left: -15%;
     }
 
-    .eu-instruçoes{
-        margin-left: -50px;
-    }
 
 }
 
